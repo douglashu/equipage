@@ -1,0 +1,51 @@
+
+/**app.wxss**/
+view{
+  font-family: "PingFangSC-Regular"
+}
+input{
+  flex: 1;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  background: #F9F9F9;
+  overflow: hidden;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.container::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 100%;
+  height: 1rpx;
+  background-color: #e2e2e2;
+  z-index: 5;
+}
+.navigator-arrow {
+  padding-right: 26rpx;
+  position: relative;
+  flex: 1;
+}
+.navigator-arrow:after {
+  content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  right: 28rpx;
+}

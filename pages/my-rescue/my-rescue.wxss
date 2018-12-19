@@ -1,0 +1,77 @@
+/* pages/my-rescue/my-rescue.wxss */
+.my_rescue{
+  padding: 40rpx;
+}
+.server{
+  text-align: center;
+}
+.hello{
+  font-size: 50rpx;
+  color: #FD9153;
+  letter-spacing: 0;
+}
+.server_count{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #676767;
+  letter-spacing: 0;
+}
+.server_count text{
+  color: #FD9153;
+  font-size: 32rpx;
+}
+.position{
+  background: #FFFFFF;
+  box-shadow: 0 5rpx 9rpx 0 #C7C7C7;
+  padding: 34rpx 20rpx;
+  margin-top: 80rpx;
+}
+.position image{
+  width: 30rpx;
+  height: 40rpx;
+  padding-right: 20rpx;
+}
+.position view{
+  font-size: 40rpx;
+  color: #2D2D2D;
+  letter-spacing: 0;
+  max-width: 90%;
+}
+.next_btn{
+  margin-top: 60rpx;
+}
+.next_btn button{
+  background: #4A4C5B;
+  border-radius: 5rpx;
+  font-size: 35rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+.button-hover[type="default"] {
+  background-color:#4A4C5B;
+  color: #fff;
+}
+.discounts{
+  font-size: 30rpx;
+  color: #FD9153;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 60rpx;
+}
+.reminder{
+  margin-top: 120rpx;
+}
+.reminder_title{
+  font-size: 39rpx;
+  color: #676767;
+  letter-spacing: 0;
+}
+.reminder_list{
+  font-size: 24rpx;
+  color: #676767;
+  letter-spacing: 0;
+  padding: 0 20rpx;
+}
+.reminder_list view{
+  margin-top: 20rpx;
+}

@@ -1,0 +1,15 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class='personalCenter'>
+  <!-- 用户信息 -->
+  <view class='user row'>
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <view>{{userInfo.nickName}}</view>
+  </view>
+  <!-- 管理列表 -->
+  <view class='personal_list'>
+    <navigator class='row personal_item' url="{{item.url}}" wx:for="{{list}}" wx:key="unique">
+      <image src="{{item.img}}"></image>
+      <view>{{item.label}}</view>
+    </navigator>
+  </view>
+</view>

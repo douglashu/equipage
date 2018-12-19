@@ -1,0 +1,48 @@
+<!--pages/order-detail/order-detail.wxml-->
+<view class='main'>
+  <view>
+    <view class='detail'>
+        <view class='name row'>
+          <label>姓名：</label>
+          <view>{{orderDetail.name}}</view>
+        </view>
+        <view class='age row'>
+          <label>称谓：</label>
+          <view>{{orderDetail.appellation}}</view>
+        </view>
+        <view class='plate_number row'>
+          <label>车牌：</label>
+          <view>{{orderDetail.plateNumber}}</view>
+        </view>
+        <view class='brand row'>
+          <label>品牌：</label>
+          <view>{{orderDetail.brand}}</view>
+        </view>
+        <view class='brand row'>
+          <label>颜色：</label>
+          <view>{{orderDetail.color}}</view>
+        </view>
+        <view class='location row'>
+          <label>位置：</label>
+          <view>{{orderDetail.location.address}}</view>
+        </view>
+        <view class='tel row'>
+          <label>电话：</label>
+          <view>{{orderDetail.tel}}</view>
+        </view>
+    </view>
+    <view class='rescue_demand'>
+      <view class='rescue_demand_title'>救援需求</view>
+      <view class='demand_list row'>
+        <view class="demand_item row" wx:for="{{demandList}}" wx:key="index" data-value="{{item}}" >
+          <view class="demand_item_content  {{item.name == orderDetail.rescueDemand? 'active': ''}}">
+            <image src="{{item.img}}" wx:if="{{item.name != orderDetail.rescueDemand}}"></image>
+            <image src="{{item.imgActive}}" wx:if="{{item.name == orderDetail.rescueDemand}}"></image>
+            <view>{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+      <input name="demand" hidden value="{{demand}}"></input>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+/* pages/personalCenter/personalCenter.wxss */
+page {
+  color: #333;
+  background: #f0f0f6;
+}
+/* 用户信息 */
+.user{
+  padding: 40rpx;
+  font-size: 40rpx;
+  color: #000;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 #CCCCCC;
+}
+.user image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.user view{
+  padding-left: 20rpx;
+}
+/* 管理列表 */
+.personal_list{
+  margin-top: 20rpx;
+}
+.personal_item{
+  padding: 35rpx;
+  background: #fff;
+  font-size: 24rpx;
+  color: #4A4C5B;
+  letter-spacing: 0;
+  margin-bottom: 5rpx;
+}
+.personal_item image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.personal_item view{
+  padding-left: 30rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/menu/menu.wxml-->
+<view class='demand_list row'>
+  <view class="demand_item row" wx:for="{{demandList}}" wx:key="index" bindtap='navigator' data-value="{{item}}">
+    <!-- <image src="{{item.img}}" wx:if="{{item.status}}"></image> -->
+    <view class="demand_item_content  {{active == index? 'active': ''}}">
+      <image src="{{item.img}}" wx:if="{{active != index}}"></image>
+      <image src="{{item.imgActive}}" wx:if="{{active == index}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+    <!-- <image src="{{item.img}}" wx:if="{{!item.status}}"></image> -->
+  </view>
+</view>

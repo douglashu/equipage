@@ -1,0 +1,10 @@
+<!--pages/rescue-orders/rescue-orders.wxml-->
+<wxs  src="../../common/filter.wxs" module="dateFr"></wxs>
+<view class='rescue_orders'>
+    <view class='orders_list' wx:for="{{orderList}}" wx:key="index" data-value="{{item}}"  bindtap='ordersDetail' >
+      <view>{{item.rescueDemand}}</view>
+      <view>{{dateFr.getDate(item.createdDate)}}</view>
+      <view>{{item.location.address}}</view>
+    </view>
+    <view class='no_orders' wx:if="{{orderList.length == 0}}">您尚无订单列表</view>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/my-rescue/my-rescue.wxml-->
+<view class='my_rescue'>
+  <view class='rescure'>
+    <view class='server'>
+      <view class='hello'>您好，很高兴为您服务</view>
+      <view class='server_count'>您附近有 <text>{{size}}</text> 个车马仕为您服务</view>
+    </view>
+    <view class='position row' bindtap="chooseLocation">
+      <image src="../../images/dingwei.png"></image>
+      <view>{{location.name}}</view>
+    </view>
+    <view class='next_btn'>
+      <button size="default" type="default" bindtap='next'>下一步</button>
+    </view>
+    <view class='discounts'>办理车佳汇洗车卡，洗车更优惠，分店通用</view>
+  </view>
+  <view class='reminder'>
+    <view class='reminder_title'>温馨提示：</view>
+    <view class='reminder_list'>
+      <view>1.服务区域：目前仅限徐汇区，未来几个月内上海即将全面全天服务</view>
+      <view>2.对于超过服务站点服务范围距离一公里以外，和某些特殊时间段，车马仕会根据情况酌情收取服务费用50-100元人民币</view>
+      <view>3.建议社党提前了解车况问题，让车马仕能够更好地为您提供准确的服务</view>
+    </view>
+  </view>
+</view>

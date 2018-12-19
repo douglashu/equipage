@@ -1,0 +1,47 @@
+<!--pages/management-center/management-center.wxml-->
+<view class='management_center'>
+  <view class='management_list row'>
+    <view class="{{managementCurrent == item.name? 'management': ''}}" wx:for="{{management}}" wx:key="index" 
+    bindtap='bindManagement' data-value="{{item}}">{{item.name}}</view>
+  </view>
+  <view class='search row' wx:if="{{managementCurrent != '新增'}}">
+    <input name="search" bindblur="blurInput" placeholder='名称搜索 | 徐家汇商务园洗车点'></input>
+      <view class='determine' bindtap='search'>确定</view>
+  </view>
+  <form catchsubmit="formSubmit">
+    <view class='form'>
+        <view class='name row'>
+          <label>名称：</label>
+          <input name="name"  placeholder='请填写服务点名称' value="{{name}}"></input>
+        </view>
+        <view class='address row'>
+          <label>地址：</label>
+          <input name="address"  placeholder='请填写服务点地址' value="{{address}}"></input>
+        </view>
+        <view class='type row'>
+          <label>类型：</label>
+          <view class='row'>
+              <label class="type_checkbox {{invTypeList[index] == item.id? 'current': ''}}" wx:for="{{typeList}}" wx:key="index" bindtap='bindType' data-value="{{item}}">{{item.name}}</label>
+          </view>
+        </view>
+        <view class='coordinates row'>
+          <label>坐标：</label>
+          <input name="longitude" placeholder='经度' value="{{longitude}}"></input>
+          <input name="latitude" placeholder='纬度' value="{{latitude}}"></input>
+        </view>
+        <view class='tel row'>
+          <label>电话：</label>
+          <input type='number' name="phones" placeholder='请填写' value="{{phones}}"></input>
+        </view>
+        <view class='contact row'>
+          <label>联系人：</label>
+          <input  name="contact" placeholder='请填写' value="{{contact}}"></input>
+        </view>
+    </view>
+    <view class='btn'>
+      <button wx:if="{{managementCurrent == '新增'}}" size="default" type="default" formType="submit" loading="{{loading}}">新增</button>
+      <button wx:if="{{managementCurrent == '删除'}}" size="default" type="default" bindtap="bindDelete" loading="{{loading}}">删除</button>
+      <button wx:if="{{managementCurrent == '修改'}}" size="default" type="default" formType="submit" loading="{{loading}}">修改</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,25 @@
+var formatMsgTime = function (timespan) {
+  var date = getDate(timespan),
+    Y = date.getFullYear() + '年',
+    M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '月',
+    D = date.getDate() + '日 ',
+    H = date.getHours() + ': ',
+    I = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
+  return Y + M + D + H + I
+}
+
+var formatDistance = function (distance) {
+  var m;
+  console.log(distance)
+  if (distance < 1000) {
+    m = distance + 'm'
+  } else {
+    m = '约' +  Math.ceil(distance / 1000) + 'Km'
+  }
+  return m;
+}
+
+module.exports = {
+  getDate: formatMsgTime,
+  getDistance: formatDistance
+}

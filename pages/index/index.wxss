@@ -1,0 +1,22 @@
+/*重置panle样式*/
+.open_btn{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom:60rpx;
+}
+image{
+  width: 100%;
+  height: calc(100vh); 
+}
+.open_btn button{
+  width: 410rpx;
+  height: 95rpx;
+  border: 1px solid #FD9153;
+  border-radius: 5px;
+  color: #FD9153;
+}
+.button-hover{
+  background-color: #fff;
+  color: #febf9a;
+}

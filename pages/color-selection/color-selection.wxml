@@ -1,0 +1,12 @@
+<!--pages/color-selection/color-selection.wxml-->
+<view class='color_selection'>
+  <view class='color_list row'>
+    <view class="color_item {{item.id == active? 'active': ' '}}" wx:for="{{colorList}}" wx:key="index" bindtap='bindColor' data-value="{{item}}">
+      <view class='bg_color' style="background: {{item.bg}}"></view>
+      <view class='text'>{{item.name}}</view>
+    </view>
+  </view>
+  <view class='btn_confirm'>
+    <button size="default" type="default" bindtap="submit">确认</button>
+  </view>
+</view>

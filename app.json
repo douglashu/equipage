@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/location/location",
+    "pages/location-detail/location",
+    "pages/personalCenter/personalCenter",
+    "pages/my-vehicle/my-vehicle",
+    "pages/brand-choice/brand-choice",
+    "pages/my-rescue/my-rescue",
+    "pages/vehicle-submit/vehicle-submit",
+    "pages/color-selection/color-selection",
+    "pages/rescue-orders/rescue-orders",
+    "pages/order-detail/order-detail",
+    "pages/management-center/management-center",
+    "pages/menu/menu"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#262930",
+    "navigationBarTitleText": "车马仕",
+    "navigationBarTextStyle": "#fff",
+    "enablePullDownRefresh": true
+  }
+}

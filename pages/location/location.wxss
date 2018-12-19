@@ -1,0 +1,111 @@
+/*容器区域*/
+
+.main {
+   height: calc(100vh); 
+  width: 100%;
+}
+
+/* 导航 */
+.nav{
+  justify-content: space-around;
+  padding: 20rpx 0;
+  color: #666;
+  height: 90rpx;
+  font-size: 28rpx;
+}
+.management_center image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.personal_center image{
+  width: 34rpx;
+  height: 40rpx;
+  padding-top: 8rpx;
+}
+.current{
+  color: #FD9153;
+}
+/*地图样式控制*/
+
+ .map {
+  height: calc(100vh - 450rpx);
+  width: 100%;
+}
+.scrollMap{
+  height: calc(100vh - 320rpx);
+}
+.hidenMap {
+  height: calc(100vh - 970rpx);
+}
+
+/*底部详细信息控制*/
+.actionSheet{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  overflow:hidden; 
+  z-index: 100;
+  max-height: 310rpx;
+}
+.touch_arrow{
+  text-align: center;
+  background: #fff;
+}
+.touch_arrow image{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.active{
+  overflow:inherit !important;
+   top: 32% !important; 
+}
+
+.descript {
+  padding: 0 20rpx;
+  display: flex;
+  min-height: 136rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.descript .left {
+  flex: 1 0 0;
+  display: flex;
+  padding-left: 10rpx;
+  flex-direction: column;
+}
+
+.descript .right {
+  flex: 0 0 200rpx;
+  display: flex;
+  padding-right: 20rpx;
+  justify-content: space-around;
+  align-items: center; 
+}
+
+.descript .left .name {
+  font-size: 40rpx;
+  padding-top:15rpx;
+}
+
+.descript .left .brief-addr {
+  height: 90rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+/*详细路径导航按钮*/
+
+.navigate {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/* 没有服务点 */
+.zan-panel{
+  border: 0;
+  text-align: center;
+}

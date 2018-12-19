@@ -1,0 +1,62 @@
+/* pages/order-detail/order-detail.wxss */
+.prompt{
+  background: #F3F4F6;
+  padding: 20rpx;
+  font-size: 35rpx;
+  color: #4A4C5B;
+  letter-spacing: 0;
+  text-align: center;
+}
+.detail{
+  padding: 20rpx 30rpx;
+}
+.name, .age, .plate_number, .tel, .brand, .location{
+  font-size: 35rpx;
+  padding: 10rpx 0;
+  color: #676767;
+  letter-spacing: 0;
+}
+.name view, .age view, .plate_number view, .tel view, .brand view, .location view{
+  padding-left: 25rpx;
+  font-size: 30rpx;
+  color: #2d2d2d;
+  letter-spacing: 0;
+  max-width: 80%;
+}
+.rescue_demand{
+  padding: 40rpx;
+  text-align: center;
+}
+.rescue_demand_title{
+  padding: 20rpx;
+  font-size: 40rpx;
+  color: #676767;
+}
+.demand_item{
+  padding: 20rpx 0;
+  margin:  0 20rpx;
+}
+.demand_item>image{
+  width: 40rpx;
+  height: 50rpx;
+}
+.demand_item_content{
+  box-sizing: border-box;
+  width: 209rpx;
+  height: 134rpx;
+  margin: 0 43rpx;
+  font-size: 24rpx;
+  color: #676767;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 6px 0 rgba(204,204,204,0.50);
+  border-radius: 5px;
+}
+.active{
+  color: #FD9153;
+  border: 2rpx solid #FD9153; 
+}
+.demand_item_content image{
+  padding-top: 40rpx;
+  width: 40rpx;
+  height: 50rpx;
+}

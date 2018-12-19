@@ -1,0 +1,32 @@
+<!--pages/brand-choice/brand-choice.wxml-->
+<view class='main'>
+  <view class='hot'>
+    <view class='hot_title row'>
+      <image ></image>
+      <view>热门品牌</view>
+    </view>
+    <view class='hot_list row' wx:for="{{hotList}}" wx:key="index" bindtap='confirm' data-value='{{item}}'>
+      <image src="{{item.src}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <view class='carList'>
+    <block wx:for-items="{{carList}}" wx:key="{{item.id}}">
+        <view class="car-list-item">
+          <view id="{{item.id}}" class="car-list-item-hd {{item.open ? 'car-list-item-hd-show' : ''}}" bindtap="kindToggle">
+            <view class="car-list-text">{{item.initial}}</view>
+            <view class="navigator-arrow"></view>
+          </view>
+          <view class="car-list-item-bd {{item.open ? 'car-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+            
+               <view class='hot_list row' wx:for="{{item.item}}" wx:key="index" bindtap='confirm' data-value='{{item}}'>
+                <image src="{{item.src}}"></image>
+                <view>{{item.name}}</view>
+              </view> 
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>
+</view>

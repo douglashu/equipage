@@ -1,0 +1,25 @@
+/* pages/rescue-orders/rescue-orders.wxss */
+.page{
+  background: #f3f4f6;
+}
+.rescue_orders{
+  padding: 25rpx;
+}
+.orders_list{
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  border-radius: 5px;
+  margin: 30rpx 15rpx;
+  padding: 10rpx;
+}
+.orders_list view{
+  font-size: 24rpx;
+  color: #4A4C5B;
+  letter-spacing: 0;
+  padding: 10rpx;
+}
+.no_orders{
+  font-size: 28rpx;
+  text-align: center;
+  color: #999;
+}

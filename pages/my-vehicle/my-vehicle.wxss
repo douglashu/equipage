@@ -1,0 +1,55 @@
+/* pages/my-vehicle/my-vehicle.wxss */
+.prompt{
+  background: #F3F4F6;
+  padding: 20rpx;
+  font-size: 35rpx;
+  color: #4A4C5B;
+  letter-spacing: 0;
+  text-align: center;
+}
+.form{
+  padding: 20rpx 30rpx;
+}
+.name, .age, .plate_number, .tel, .brand{
+  font-size: 35rpx;
+  padding: 10rpx 0;
+  color: #676767;
+  letter-spacing: 0;
+}
+.name input, .age>view, .plate_number input, .tel input, .brand view{
+  padding-left: 25rpx;
+  font-size: 30rpx;
+  color: #909090;
+  letter-spacing: 0;
+}
+.age_checkbox{
+  font-size: 26rpx;
+  color: #4A4C5B;
+  letter-spacing: 0;
+  padding: 3rpx 18rpx;
+  border: 2rpx solid #4A4C5B;
+  border-radius: 5px;
+  margin-right: 40rpx;
+}
+.current{
+  color: #FD9153;
+  border: 2rpx solid #FD9153;
+}
+.btn{
+  padding: 50rpx 40rpx;
+}
+.btn button{
+  background: #4A4C5B;
+  font-size: 35rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+.button-hover[type="default"] {
+  color: #fff;
+  background-color:#4A4C5B;
+}
+button[loading][type="default"] {
+  color: #fff;
+  background-color:#4A4C5B;
+}
+

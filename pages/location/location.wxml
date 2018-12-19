@@ -1,0 +1,73 @@
+<wxs  src="../../common/filter.wxs" module="dateFr"></wxs>
+<view class="main">
+  <view>
+    <view class='row nav'>
+      <view class='personal_center' bindtap='personalCenter'>
+        <image src="../../images/wode2.png"></image>
+      </view>
+      <view class="{{item.status == current ? 'current': ' '}}" wx:for="{{table}}" wx:key="unique" data-value="{{item}}" bindtap='bindTable'>{{item.label}}</view>
+      <view class='management_center' bindtap='bindMenu'>
+        <image src="../../images/gengduo.png"></image>
+      </view>
+    </view>
+    <view wx:if="{{markers.length > 0 && !onLine}}">
+       <map class="map {{active? 'hidenMap': ' '}} {{markers.length == 1? 'scrollMap': ' '}}"
+          id="map" 
+          longitude="{{longitude}}" 
+          latitude="{{latitude}}" 
+          scale="15" 
+          markers="{{markers}}" 
+          bindmarkertap="doMarkertap"
+          polyline="{{polyline}}"
+          show-location>
+      </map>       
+      <view class="actionSheet {{active? 'active': ' '}}">
+        <view class='touch_arrow' bindtap='showActionSheet'>
+          <image src="/images/upward-arrow.jpg" wx:if="{{!active}}"></image>
+          <image src="/images/down-arrow.jpg" wx:if="{{active}}"></image>
+        </view>
+        <scroll-view scroll-y="true" style="max-height: {{active? '790rpx': ' 1000rpx'}};" bindscrolltolower="loadMore">
+          <view class="descript" wx:for="{{list}}" wx:key="unique" >
+            <view class="left">
+              <view class="name">{{item.name}}</view>
+              <view class="brief-addr"><text>{{dateFr.getDistance(item.distance)}}  | </text>{{item.location.address}}</view>
+            </view>
+            <view class="right">
+              <image class="navigate" wx:if="{{chooseType != 2}}" src="{{makePhone}}" mode="aspectFit" catchtap="makePhone" data-tel="{{item.phones[0]}}"></image>
+              <image class="navigate" src="{{navigateImag}}" mode="aspectFit" catchtap="goDetail" data-value="{{item}}"></image>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <!--查无结果处理界面-->
+    <view class="zan-panel no-data" wx:if="{{size == 0}}">
+      <image src="../../images/Sorry.png" mode="aspectFit"></image>
+      <view class="zan-cell__bd">我真的尽力了，附近没有服务点</view>
+      <view class="zan-btns">
+        <button class="zan-btn" bindtap="doRefresh">要不！刷新试试</button>
+      </view>
+    </view>
+  <!--没有权限-->
+  </view>
+  <view class="container error" wx:if="{{noAuth}}">
+    <view class="zan-panel">
+      <image src="../../images/Sorry.png" mode="aspectFit"></image>
+      <view class="zan-cell__bd error-info">不是我不帮你，你连定位权限都不开启，我就没法了。</view>
+      <view class="zan-btns">
+        <button class="zan-btn" bindtap="doAuth">要不！重新获取权限</button>
+      </view>
+    </view>
+  </view>
+
+  <!--没有网络显示-->
+  <view class="container error" wx:if="{{onLine}}">
+    <view class="zan-panel">
+      <image src="../../images/Sorry.png" mode="aspectFit"></image>
+      <view class="zan-cell__bd error-info">在这个网络不可缺少的时代，居然没有连网，我也帮不了你了。</view>
+      <view class="zan-btns">
+        <button class="zan-btn" bindtap="doRefresh">要不！刷新试试</button>
+      </view>
+    </view>
+  </view>
+</view>

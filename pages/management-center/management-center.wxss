@@ -1,0 +1,80 @@
+/* pages/management-center/management-center.wxss */
+.management_list{
+  padding: 0 45rpx;
+  justify-content: space-around;
+  font-size: 28rpx;
+  color: #676767;
+  box-shadow: 0 2px 8px 0 #CCCCCC;
+}
+.management_list view{
+  padding: 25rpx 0;
+}
+.form{
+  padding: 20rpx 30rpx;
+}
+.name,.address, .type, .coordinates, .tel, .contact{
+  font-size: 35rpx;
+  padding: 10rpx 0;
+  color: #676767;
+  letter-spacing: 0;
+}
+.search{
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #C7C7C7;
+}
+.search input{
+  font-size: 30rpx;
+  color: #909090;
+  letter-spacing: 0;
+}
+.determine{
+  font-size: 30rpx;
+  color: #FD9153;
+  letter-spacing: 0;
+}
+.name input, .type>view, .coordinates input, .tel input, .contact input,.address input{
+  padding-left: 25rpx;
+  font-size: 30rpx;
+  color: #909090;
+  letter-spacing: 0;
+}
+.coordinates input{
+  border: 1px solid #C7C7C7;
+  border-radius: 5px;
+  margin-right: 40rpx;
+  margin-left: 20rpx;
+  padding-left: 8rpx;
+}
+.type_checkbox{
+  font-size: 26rpx;
+  color: #4A4C5B;
+  letter-spacing: 0;
+  padding: 3rpx 18rpx;
+  border: 2rpx solid #4A4C5B;
+  border-radius: 5px;
+  margin-right: 40rpx;
+}
+.current{
+  color: #FD9153;
+  border: 2rpx solid #FD9153;
+}
+.management{
+  color: #FD9153;
+}
+.btn{
+  padding: 50rpx 40rpx;
+}
+.btn button{
+  background: #4A4C5B;
+  font-size: 35rpx;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+.button-hover[type="default"] {
+  color: #fff;
+  background-color:#4A4C5B;
+}
+button[loading][type="default"] {
+  color: #fff;
+  background-color:#4A4C5B;
+}

@@ -1,0 +1,6 @@
+<view class="container">
+  <image src="/images/home.jpg"></image>
+  <view class='open_btn'>
+    <button bindtap='open'>立即开启</button>
+  </view>
+</view>
